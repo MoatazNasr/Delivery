@@ -1,0 +1,62 @@
+@import "./buttons";
+@import "../base/mixins";
+@import "../layout/layout";
+
+.contact {
+  @include margin(0, 0, 7.5rem, 0);
+  text-align: left;
+  &-container {
+    @extend %container;
+    @include gridCols(2);
+    @media screen and (max-width: 768px) {
+      @include gridCols(1);
+      .contact-data {
+        text-align: center;
+      }
+      .contact-description {
+        width: 100%;
+      }
+    }
+    .contactForm {
+      @include margin(0, auto, 0, auto);
+    }
+    .contactForm button {
+      cursor: pointer;
+      @media screen and (max-width: 768px) {
+        display: block;
+        @include margin(0, auto, 0, auto);
+      }
+    }
+    .contactForm .form-group {
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+      .form-control {
+        @extend .button;
+        color: black;
+        @include margin(0, auto, 0.5rem, auto);
+        background-color: white;
+        border: 1px solid var(--main-color-light);
+        &:focus {
+          background-color: var(--main-color-lightest);
+        }
+      }
+    }
+  }
+  &-title {
+    font-size: var(--fs-h2);
+    @include margin(0, 0, 2rem, 0);
+  }
+  &-description {
+    @include margin(0, 0, 1.5rem, 0);
+    @include charactersWidth(40);
+  }
+  &-details {
+    @include margin(0.8rem, 0, 0.8rem, 0);
+    color: var(--text-color-light);
+    font-weight: 700;
+    &-title {
+      color: var(--text-color);
+    }
+  }
+}

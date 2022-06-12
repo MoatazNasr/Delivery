@@ -1,0 +1,58 @@
+// BUTTONS
+.button {
+  padding: 1rem 1.5rem;
+  background-color: var(--main-color-light);
+  color: var(--title-color);
+  border-radius: 3rem;
+  border: none;
+  font-weight: 600;
+  transition: 0.5s;
+  @media screen and (max-width: 400px) {
+    display: block;
+    margin: 1rem;
+  }
+  &:hover {
+    background-color: var(--main-color-lightest);
+    border: none;
+  }
+  &-nav-toggle {
+    border: none;
+    background: none;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+   color: var(--title-color);
+    @media screen and (max-width: 890px) {
+      display: inline;
+    }
+  }
+  &-header {
+    display: none;
+    cursor: pointer;
+  }
+  &-scrollUp {
+    background: var(--main-color-lightest);
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 3rem;
+    padding: 0.1rem 0.25rem;
+    position: fixed;
+    display: none;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    &-show {
+      display: block;
+    }
+  }
+  &-changeTheme {
+    background: none;
+    color: var(--title-color);
+    border: none;
+    font-size: 2rem;
+    position: relative;
+    top: 0.2rem;
+    cursor: pointer;
+  }
+}

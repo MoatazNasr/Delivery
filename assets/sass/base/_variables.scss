@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* ---CUSTOM CSS (VARIABLES)--- */
+
+:root {
+  /* ---COLORS--- */
+  --main-color: hsl(263, 49%, 73%);
+  --main-color-light: hsl(263, 49%, 80%);
+  --main-color-lightest: hsl(263, 49%, 85%);
+  /* ---TYPOGRAPHY--- */
+  /* ff -> font family , fs -> font size */
+  --ff-poppins: "Poppins", sans-serif;
+  --fs-big-text: clamp(2rem, 4.7vw, 3rem);
+  /* 2rem -> 32px , 3rem -> 48px */
+  --fs-h2: clamp(1.25rem, 3.5vw, 1.75rem);
+  /* 1.25rem -> 20px , 1.75rem -> 28px */
+  --fs-h3: clamp(1.125rem, 3vw, 1.25rem);
+  /* 1.125rem -> 18px , 1.25rem -> 20px */
+  --fs-normal-text: clamp(0.9375rem, 2.7vw, 1rem);
+  /* 0.9375rem -> 15px , 1rem -> 16px */
+  --fs-small-text: clamp(0.8125rem, 2.3vw, 0.875rem);
+  /* 0.8125rem -> 13px , 0.875rem -> 14px */
+}

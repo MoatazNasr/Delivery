@@ -1,0 +1,33 @@
+@mixin margin($T, $R, $B, $L) {
+  margin: $T $R $B $L;
+}
+// margins
+
+@mixin animation() {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-bottom: 3px solid var(--title-color);
+  bottom: -0.3rem;
+  animation: border-animation 0.5s linear;
+  @keyframes border-animation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+// animation mixin
+
+@mixin gridCols($noColumns) {
+  --grid-cols:#{#{$noColumns}};
+  grid-template-columns: repeat(var(--grid-cols), 1fr);}
+// grid columns mixin
+
+@mixin charactersWidth($chW) {
+  width: #{$chW}ch;
+}
+// how many characters a line can take

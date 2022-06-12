@@ -1,0 +1,33 @@
+@import '../base/mixins';
+@import '../layout/layout';
+
+.app {
+    @include margin(0,0,7.5rem,0);
+    text-align: left;  
+    &-container {
+      @extend %container;
+      @include gridCols(2);
+      .app-data {
+        @include margin(0,0,0,auto);
+        align-self: center;
+      }
+      @media screen and (max-width: 768px) {
+        @include gridCols(1);
+        .app-data {
+          text-align: center;
+        }
+        .app-description {
+          width: 100%;
+        }
+      }
+    }
+    &-title {
+      font-size: var(--fs-h2);
+      @include margin(0,0,2rem,0);
+    }
+    &-description {
+      @include margin(0,0,2rem,0);
+      @include charactersWidth(40);
+    }
+  }
+  

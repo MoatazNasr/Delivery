@@ -1,0 +1,11 @@
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 1rem;
+  &-thumb {
+    background: var(--main-color-light);
+    border-radius: 0.5rem;
+    &:hover {
+      background: var(--main-color-lightest);
+    }
+  }
+}

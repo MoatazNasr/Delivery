@@ -1,0 +1,14 @@
+.body {
+  &-lightTheme {
+    --title-color: hsl(240, 96%, 11%);
+    --text-color: hsl(56, 4%, 30%);
+    --text-color-light: hsl(56, 4%, 50%);
+    --bg-color: #ffff;
+  }
+  &-darkTheme {
+    --title-color: hsl(0, 2%, 120%);
+    --text-color: hsl(0, 1%, 54%);
+    --text-color-light: hsl(0, 0%, 90%);
+    --bg-color: #000;
+  }
+}

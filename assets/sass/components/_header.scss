@@ -1,0 +1,85 @@
+@import "../base/mixins";
+.header {
+  width: 100%;
+  @include margin(1rem, 0, 0, 0);
+}
+// navbar
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  @include margin(0, 2rem, 0, 2rem);
+  font-weight: 600;
+  // nav menu
+  &-menu {
+    z-index: 9999999999999999999999;
+    @media screen and (max-width: 890px) {
+      display: grid;
+      place-content: center;
+      position: fixed;
+      top: -110%;
+      left: 0;
+      right: 0;
+      width: 55%;
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      @include margin(2.5rem, auto, 2.5rem, auto);
+      box-shadow: 0 0 0.2rem var(--title-color);
+      background: #fff;
+      transition: all 0.5s;
+      .nav-link-active::after{
+        color: black;
+      }
+      * {
+        color: black !important;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      width: 77%;
+    }
+    &-show {
+      top: 4rem;
+      transition: all 0.8s;
+    }
+  }
+  //   nav items & links
+  &-logo,
+  &-link,
+  &-item {
+    @include margin(0.5rem, 0, 0.5rem, 0);
+    list-style: none;
+    font-weight: 600;
+    color: var(--title-color);
+    position: relative;
+  }
+  &-item {
+    padding: 0 2rem;
+    &:hover::after {
+      @include animation();
+    }
+    &:nth-of-type(5):hover::after {
+      border: none;
+    }
+  }
+  &-link-active::after {
+    content: ".";
+    width: 100%;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: -1.5rem;
+    color: var(--title-color);
+    left: 0;
+  }
+  //change background of navbar on scrolling (y-axis)
+  &-changeBackground {
+    background: var(--main-color-lightest);
+    border-right: 5px solid var(--title-color);
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    @include margin(0,auto,0,auto);
+    z-index: 1;
+  }
+}

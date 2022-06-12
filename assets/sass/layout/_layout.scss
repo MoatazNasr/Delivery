@@ -1,0 +1,29 @@
+.svg {
+  &-color {
+    fill: var(--main-color);
+  }
+  &-blob {
+    fill: var(--main-color-lightest);
+  }
+  &-img {
+    justify-self: center;
+    width: 110%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+    &-service {
+      width: 70%;
+      margin-block: 1.5rem;
+    }
+  }
+}
+
+// layout
+%container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
